@@ -1,57 +1,163 @@
-body {
-    font-family: Arial, sans-serif;
+/* Resetando margens e padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Corpo e fonte */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
 header {
-    background-color: #0044cc;
-    padding: 1rem;
+    background: #1e2a47;
+    color: white;
+    padding: 20px;
+}
+
+header .logo img {
+    width: 70px;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: none;
     display: flex;
     justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    font-size: 1.2rem;
-}
-
-footer {
-    background-color: #333;
     color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
+nav ul li a:hover {
+    color: #dc2d2d;
+}
+
+/* Seção Principal */
 main {
+    padding: 30px 15px;
     text-align: center;
-    padding: 2rem;
+}
+
+main .intro h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+main .intro p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
 }
 
 .galeria {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.viagem {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 350px;
+    text-align: center;
+    padding: 15px;
 }
 
 .viagem img {
     width: 100%;
-    max-width: 300px;
     height: auto;
+    border-radius: 8px;
 }
 
-.viagem {
+.viagem h2 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #1e2a47;
+}
+
+.viagem p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #555;
+}
+
+.viagem a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background-color: #1e2a47;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.viagem a:hover {
+    background-color: #dc2d2d;
+}
+
+/* Footer */
+footer {
+    background-color: #1e2a47;
+    color: white;
     text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .viagem {
+        max-width: 90%;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    main .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    main .intro p {
+        font-size: 1rem;
+    }
+
+    .viagem h2 {
+        font-size: 1.2rem;
+    }
+
+    .viagem p {
+        font-size: 0.9rem;
+    }
 }

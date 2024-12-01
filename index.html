@@ -4,57 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lobão Turismo - Agência de Viagens</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <title>Traveller - Pacotes de Viagem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef5f9;
+            color: #333;
+        }
+
+        header {
+            background: url('img/praia-banner.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .main-content h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .main-content p {
+            margin: 0 auto 20px;
+            max-width: 600px;
+        }
+
+        .destinations {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .destination {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            width: 200px;
+        }
+
+        .destination img {
+            width: 100%;
+        }
+
+        .destination h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .destination p {
+            padding: 0 10px 10px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <img src="img/logolobao.jpg" alt="Lobão Turismo" width="80">
-        </div>
+        <h1>Traveller</h1>
+        <p>Maldivas a partir de $1099 - Explore os destinos dos seus sonhos!</p>
         <nav>
-            <ul class="menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="pacotesdeviagem/index.html">Pacotes de Viagem</a></li>
-                <li><a href="pacotesdeviagem/index.html">Passeios Turísticos</a></li>
-                <li><a href="lobaoturismo/index.html">Sobre a Agência</a></li>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="intro">
-            <h1>Bem-vindo à Lobão Turismo</h1>
-            <p>Explore destinos incríveis com pacotes e passeios exclusivos para você e sua família!</p>
-        </section>
+    <main class="main-content">
+        <h2>Descubra Lugares Incríveis</h2>
+        <p>Explore nossos pacotes para destinos paradisíacos com preços acessíveis e experiências inesquecíveis.</p>
 
-        <section class="galeria">
-            <div class="viagem">
-                <h2>Porto Seguro-BA</h2>
-                <img src="img/porto-seguro.jpg" alt="Porto Seguro-BA" width="300">
-                <p>Pacotes especiais com hospedagem e passeios inclusos. Descubra o paraíso tropical!</p>
-                <a href="https://wa.me/seunumerowhatsapp?text=Gostaria+de+mais+informações+sobre+as+Praias+do+Nordeste" target="_blank">Reservar Agora</a>
+        <section class="destinations">
+            <div class="destination">
+                <img src="img/thailand.jpg" alt="Tailândia">
+                <h3>Tailândia</h3>
+                <p>Roteiros exóticos para explorar a cultura e natureza vibrante.</p>
             </div>
-
-            <div class="viagem">
-                <h2>Aparecida do Norte</h2>
-                <img src="img/SANTUARIOAPARECIDA.jpg" alt="Aparecida do Norte" width="300">
-                <p>Conheça os destinos mais românticos da Europa com roteiros encantadores.</p>
-                <a href="https://wa.me/seunumerowhatsapp?text=Gostaria+de+mais+informações+sobre+o+pacote+Europa+Romântica" target="_blank">Reservar Agora</a>
+            <div class="destination">
+                <img src="img/maldives.jpg" alt="Maldivas">
+                <h3>Maldivas</h3>
+                <p>Um paraíso no oceano com praias de tirar o fôlego.</p>
             </div>
-
-            <div class="viagem">
-                <h2>São Paulo</h2>
-                <img src="img/saopaulo.jpg" alt="São Paulo" width="300">
-                <p>Uma viagem mágica para toda a família! Pacotes exclusivos para a Disney.</p>
-                <a href="https://wa.me/seunumerowhatsapp?text=Gostaria+de+mais+informações+sobre+os+Pacotes+para+a+Disney" target="_blank">Reservar Agora</a>
+            <div class="destination">
+                <img src="img/sri-lanka.jpg" alt="Sri Lanka">
+                <h3>Sri Lanka</h3>
+                <p>História e natureza em um destino único.</p>
+            </div>
+            <div class="destination">
+                <img src="img/hawaii.jpg" alt="Havaí">
+                <h3>Havaí</h3>
+                <p>Surf, vulcões e paisagens incríveis te esperam!</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; Lobão Turismo. Sua viagem merece o melho!!.</p>
+        <p>&copy; 2024 Traveller. Todos os direitos reservados.</p>
     </footer>
 </body>
 

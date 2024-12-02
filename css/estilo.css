@@ -42,6 +42,7 @@ nav {
 }
 
 .menu a {
+    border-radius: 2px solid white;
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -131,6 +132,42 @@ main {
 
 .viagem .btn:hover {
     background-color: #0056b3;
+}
+.pacote .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.tour .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+.tour {
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    max-width: 400px;   /* Limita a largura do contêiner para não ficar muito grande */
+    margin: 0 auto;     /* Centraliza o contêiner dentro do pai (ex. o corpo da página) */
+    padding: 20px;      /* Adiciona um pouco de espaço em torno do conteúdo */
+}
+
+/* Para a imagem */
+.tour-img {
+    width: 100%;        /* A imagem vai ocupar 100% da largura do contêiner */
+    max-width: 700px;   /* Limita a largura da imagem */
+    height: auto;       /* Mantém a proporção da imagem */
+    border-radius: 15px; /* Arredonda as bordas da imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave ao redor da imagem */
 }
 
 /* Rodapé */

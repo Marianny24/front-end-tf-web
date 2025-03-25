@@ -1,18 +1,13 @@
-// Seleciona o botão de login pelo ID e adiciona um evento de clique para chamar a função autenticar
-const botaoLogin = document.querySelector('#entrar');
-botaoLogin.addEventListener('click', autenticar);
-
 // Seleciona a área onde as mensagens de status serão exibidas
 const areaMensagem = document.getElementById('msg');
 
 // Função assíncrona responsável por autenticar o usuário
 async function autenticar(e) {
-
-	// Impede que o formulário recarregue a página ao enviar os dados
+  // Impede que o formulário recarregue a página ao enviar os dados
   e.preventDefault(); 
 
   // Exibe uma mensagem temporária informando que a requisição está em andamento
-  document.getElementById('msg').innerText = "Aguarde... ";
+  areaMensagem.innerText = "Aguarde... ";
 
   // Coleta os valores digitados nos campos de email e senha
   const dados = {
@@ -44,12 +39,23 @@ async function autenticar(e) {
     // Armazena o token JWT no localStorage para manter a sessão do usuário
     localStorage.setItem('jwt', data.token);
 
-    // Exibe uma mensagem de sucesso na interface do usuário em verde juntamente com o Token gerado
-    window.location.href = 'usuario.html';
+    // Redireciona para a página do usuário após login bem-sucedido
+    window.location.href = 'home.html';
 
   } catch (error) {
     // Exibe uma mensagem de erro na interface do usuário em vermelho
-    areaMensagem.style = "color:red";
-    areaMensagem.innerHTML = error;
+    areaMensagem.style.color = "red";
+    areaMensagem.innerText = error.message;
   }
 }
+
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+    // Aqui você pode adicionar a lógica para processar o login
+    console.log('Email:', email);
+    console.log('Senha:', senha);
+    // Exemplo de redirecionamento após login bem-sucedido
+    window.location.href = 'home.html';
+});

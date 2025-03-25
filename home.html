@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento - Lobão Turismo</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Painel de Controle</h1>
+        <button id="logout">Sair</button>
+    </header>
+    <main>
+        <section id="pacotes-container">
+            <h2>Gerencie seus Pacotes de Viagem</h2>
+            <button id="add-package">Adicionar Pacote</button>
+        </section>
+    </main>
+    <script>
+        document.getElementById("logout").addEventListener("click", function() {
+            window.location.href = "login.html";
+        });
+
+        document.getElementById("add-package").addEventListener("click", function() {
+            const newPackage = document.createElement("div");
+            newPackage.classList.add("pacote");
+            newPackage.innerHTML = `
+                <h3>Novo Pacote</h3>
+                <p>Descrição do pacote</p>
+                <button class="edit">Editar</button>
+                <button class="delete">Excluir</button>
+            `;
+            document.getElementById("pacotes-container").appendChild(newPackage);
+        });
+    </script>
+</body>
+</html>

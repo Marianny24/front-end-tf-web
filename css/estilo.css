@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Garante que o corpo da página ocupe pelo menos 100% da altura da tela */
+    min-height: 100vh;
 }
 
 /* Cabeçalho */
@@ -23,7 +23,7 @@ header {
     background-color: #007bff;
     padding: 15px 30px;
     color: white;
-    border-bottom: 5px solid #ff6347; /* Alterei para um vermelho mais suave */
+    border-bottom: 5px solid #ff6347;
 }
 
 header .logo img {
@@ -56,7 +56,7 @@ nav {
 /* Seção Principal */
 main {
     padding: 50px 20px;
-    flex: 1; /* Isso faz com que o conteúdo principal ocupe o espaço restante disponível */
+    flex: 1;
 }
 
 /* Introdução */
@@ -84,90 +84,52 @@ main {
     padding: 20px 0;
 }
 
-.viagem {
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.viagem:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.pacote-img {
+/* Login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 5px solid #007bff;
+    height: 100vh;
 }
 
-.viagem h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin: 20px 0 10px;
+.login-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px; /* Limita o tamanho da caixa de login */
+    width: 100%;
 }
 
-.viagem p {
-    font-size: 1rem;
-    color: #666;
-    padding: 0 10px;
+.login-box h2 {
     margin-bottom: 20px;
+    color: #007bff;
 }
 
-.viagem .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-bottom: 20px;
 }
 
-.viagem .btn:hover {
-    background-color: #0056b3;
-}
-.pacote .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
     color: white;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
 }
 
-.tour .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-bottom: 20px;
-}
-.tour {
-    text-align: center; /* Centraliza o texto dentro do contêiner */
-    max-width: 400px;   /* Limita a largura do contêiner para não ficar muito grande */
-    margin: 0 auto;     /* Centraliza o contêiner dentro do pai (ex. o corpo da página) */
-    padding: 20px;      /* Adiciona um pouco de espaço em torno do conteúdo */
-}
-
-/* Para a imagem */
-.tour-img {
-    width: 100%;        /* A imagem vai ocupar 100% da largura do contêiner */
-    max-width: 700px;   /* Limita a largura da imagem */
-    height: auto;       /* Mantém a proporção da imagem */
-    border-radius: 15px; /* Arredonda as bordas da imagem */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave ao redor da imagem */
+.login-box button:hover {
+    background: #0056b3;
 }
 
 /* Rodapé */
@@ -178,7 +140,7 @@ footer {
     padding: 15px 0;
     margin-top: 30px;
     border-top: 5px solid #ff6347;
-    flex-shrink: 0; /* Isso impede que o footer seja encolhido quando o conteúdo não ocupa toda a altura da tela */
+    flex-shrink: 0;
 }
 
 footer p {

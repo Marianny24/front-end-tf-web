@@ -11,12 +11,12 @@ Pablo Nilson Ferreira.
 
 - [Visite o site da Lobão Turismo ](https://front-end-tf-web-tau.vercel.app/)
 
-- 📌 Descrição
+- 📌 Descrição:
 O Lobão Turismo é uma agência de viagens especializada em oferecer pacotes turísticos e passeios exclusivos para destinos populares. Nosso objetivo é proporcionar experiências inesquecíveis para famílias e grupos que buscam explorar os melhores pontos turísticos do Brasil e do mundo com conforto e segurança.
 
 Este projeto é um site de apresentação da agência, onde o usuário pode explorar pacotes de viagem, conhecer os passeios turísticos disponíveis, e obter informações sobre a agência. Ele foi desenvolvido com HTML, CSS e é totalmente responsivo, oferecendo uma experiência de navegação fluída em dispositivos móveis e desktop.
 
-- 🛠️ Principais Funcionalidades
+- 🛠️ Principais Funcionalidades:
 Página inicial com informações sobre a agência e pacotes de viagem.
 Galeria de pacotes com destinos turísticos populares, como Porto Seguro, Aparecida do Norte e São Paulo.
 Página de Passeios Turísticos com detalhes sobre destinos específicos como Praia dos Sonhos.

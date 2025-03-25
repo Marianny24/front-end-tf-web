@@ -26,6 +26,7 @@
                     <input type="email" id="email" placeholder="E-mail" required>
                     <input type="password" id="senha" placeholder="Senha" required>
                     <button type="submit" id="entrar">Entrar</button>
+                    <div id="msg"></div>
                 </form>
             </div>
         </section>
@@ -36,17 +37,5 @@
     </footer>
 
     <script type="module" src="js/login.js"></script>
-    <script>
-        document.getElementById('login-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const email = document.getElementById('email').value;
-            const senha = document.getElementById('senha').value;
-            // Aqui você pode adicionar a lógica para processar o login
-            console.log('Email:', email);
-            console.log('Senha:', senha);
-            // Exemplo de redirecionamento após login bem-sucedido
-            window.location.href = 'home.html';
-        });
-    </script>
 </body>
 </html>

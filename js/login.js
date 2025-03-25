@@ -49,13 +49,4 @@ async function autenticar(e) {
   }
 }
 
-document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const email = document.getElementById('email').value;
-    const senha = document.getElementById('senha').value;
-    // Aqui você pode adicionar a lógica para processar o login
-    console.log('Email:', email);
-    console.log('Senha:', senha);
-    // Exemplo de redirecionamento após login bem-sucedido
-    window.location.href = 'home.html';
-});
+document.getElementById('login-form').addEventListener('submit', autenticar);

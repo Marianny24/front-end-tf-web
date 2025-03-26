@@ -13,14 +13,12 @@ function renderPasseios() {
     passeiosContainer.innerHTML = "";
     passeios.forEach((passeio, index) => {
         const card = document.createElement("div");
-        card.className = "passeio-card";
+        card.className = "viagem";
         card.innerHTML = `
-            <h3>${passeio.titulo}</h3>
+            <h2>${passeio.titulo}</h2>
+            <img src="${passeio.imagem}" alt="${passeio.titulo}" class="pacote-img">
             <p>${passeio.descricao}</p>
-            <video class="pacote-video" controls>
-                <source src="${passeio.video}" type="video/mp4">
-                Seu navegador não suporta o elemento de vídeo.
-            </video>
+            <a href="${passeio.link}" class="btn" target="_blank">Saiba Mais</a>
             <button onclick="editPasseio(${index})">Editar</button>
             <button onclick="deletePasseio(${index})" style="background-color: red;">Remover</button>
         `;
@@ -33,13 +31,14 @@ passeioForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const titulo = document.getElementById("titulo").value;
     const descricao = document.getElementById("descricao").value;
-    const video = document.getElementById("video").value;
+    const imagem = document.getElementById("imagem").value;
+    const link = document.getElementById("link").value;
 
     if (editIndex !== null) {
-        passeios[editIndex] = { titulo, descricao, video };
+        passeios[editIndex] = { titulo, descricao, imagem, link };
         editIndex = null;
     } else {
-        passeios.push({ titulo, descricao, video });
+        passeios.push({ titulo, descricao, imagem, link });
     }
 
     passeioForm.reset();
@@ -65,7 +64,8 @@ function editPasseio(index) {
     const passeio = passeios[index];
     document.getElementById("titulo").value = passeio.titulo;
     document.getElementById("descricao").value = passeio.descricao;
-    document.getElementById("video").value = passeio.video;
+    document.getElementById("imagem").value = passeio.imagem;
+    document.getElementById("link").value = passeio.link;
     editIndex = index;
     modal.style.display = "flex";
 }

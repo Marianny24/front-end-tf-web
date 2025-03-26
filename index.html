@@ -38,7 +38,7 @@
 
             <div class="viagem">
                 <h2>Aparecida do Norte</h2>
-                <video class="pacote-video" controls width="320" loop muted>
+                <video class="pacote-video" loop autoplay muted>
                     <source src="img/mp4/aparecida_do_norte_gratidao.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
@@ -47,7 +47,7 @@
 
             <div class="viagem">
                 <h2>São Paulo</h2>
-                <video class="pacote-video" controls width="320" loop muted>
+                <video class="pacote-video" loop autoplay>
                     <source src="img/mp4/AQOYmWExBTxiTce9o-vDYnIUyx7zyTueVKFLtkScw_7mOQ_-VrtLxpdnEl4gwlcuK-Y2GClHURX9u2Izl1hG_dzs9Rs06-zuPuE-ots.mp4" type="video/mp4">Seu navegador não suporta o elemento de vídeo.rce src="img/mp4/AQOYmWExBTxiTce9o-vDYnIUyx7zyTueVKFLtkScw_7mOQ_-VrtLxpdnEl4gwlcuK-Y2GClHURX9u2Izl1hG_dzs9Rs06-zuPuE-ots.mp4" type="video/mp4">
                     
                 </video>
@@ -62,12 +62,4 @@
 
 
 </body>
-<script>
-    document.querySelectorAll('.pacote-video').forEach(video => {
-        video.removeAttribute('controls');
-        video.setAttribute('loop', '');
-        video.setAttribute('autoplay', '');
-        video.muted = true;
-    });
-</script>
 </html>

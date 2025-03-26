@@ -170,6 +170,24 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave ao redor da imagem */
 }
 
+/* Estilo para o container de vídeos */
+.video-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px; /* Centraliza o vídeo e adiciona espaçamento inferior */
+    overflow: hidden;
+    border-radius: 10px; /* Arredonda as bordas do vídeo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao redor do vídeo */
+}
+
+/* Estilo para os vídeos */
+.pacote-video {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove espaços extras ao redor do vídeo */
+    object-fit: cover; /* Garante que o vídeo preencha o container sem distorção */
+}
+
 /* Login */
 .login-container {
     display: flex;

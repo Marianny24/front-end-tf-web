@@ -25,33 +25,49 @@
             <h1>Bem-vindo à Lobão Turismo</h1>
             <p>Explore destinos incríveis com pacotes e passeios exclusivos para você e sua família!</p>
         </section>
-
+        
         <section class="galeria">
             <div class="viagem">
                 <h2>Porto Seguro-BA</h2>
-                <img src="img/porto-seguro.jpg" alt="Porto Seguro-BA" class="pacote-img">
+                <video class="pacote-video" loop autoplay muted>
+                   <source src="img/mp4/AQM9z1DBiB-l2g6T9BnTbsRFwUYB0J7d9WwZwxh5M5MRbHDvf_94Rg4DCcZP_fkuadXskj8585TktchaqYAdj7cvc1WlEGWQYrqBmwc.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
                 <p>Pacotes especiais com hospedagem e passeios inclusos. Descubra o paraíso tropical!</p>
-                <a href="https://wa.me/seunumerowhatsapp?text=Gostaria+de+mais+informações+sobre+as+Praias+do+Nordeste" class="btn" target="_blank">Reservar Agora</a>
             </div>
 
             <div class="viagem">
                 <h2>Aparecida do Norte</h2>
-                <img src="img/SANTUARIOAPARECIDA.jpg" alt="Aparecida do Norte" class="pacote-img">
-                <p>Conheça o Santuário Nacional de Aparecida, um dos maiores centros de peregrinação do Brasil.</p>
-                <a href="https://wa.me/seunumerowhatsapp?text=Gostaria+de+mais+informações+sobre+o+pacote+Santuario+Aparecida" class="btn" target="_blank">Reservar Agora</a>
+                <video class="pacote-video" controls width="320" loop muted>
+                    <source src="img/mp4/aparecida_do_norte_gratidao.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <p>Visite a Basílica de Nossa Senhora Aparecida e viva uma experiência espiritual única e emocionante!</p>
             </div>
 
             <div class="viagem">
                 <h2>São Paulo</h2>
-                <img src="img/saopaulo.jpg" alt="São Paulo" class="pacote-img">
+                <video class="pacote-video" controls width="320" loop muted>
+                    <source src="img/mp4/AQOYmWExBTxiTce9o-vDYnIUyx7zyTueVKFLtkScw_7mOQ_-VrtLxpdnEl4gwlcuK-Y2GClHURX9u2Izl1hG_dzs9Rs06-zuPuE-ots.mp4" type="video/mp4">Seu navegador não suporta o elemento de vídeo.rce src="img/mp4/AQOYmWExBTxiTce9o-vDYnIUyx7zyTueVKFLtkScw_7mOQ_-VrtLxpdnEl4gwlcuK-Y2GClHURX9u2Izl1hG_dzs9Rs06-zuPuE-ots.mp4" type="video/mp4">
+                    
+                </video>
                 <p>Uma viagem mágica para toda a família! Pacotes exclusivos para São Paulo.</p>
-                <a href="https://wa.me/seunumerowhatsapp?text=Gostaria+de+mais+informações+sobre+os+Pacotes+para+São+Paulo" class="btn" target="_blank">Reservar Agora</a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Lobão Turismo. Sua viagem merece o melhor!</p>
-    </footer>
+        <p>&copy; 2024 Lobão Turismo. Sua viagem merece o melhor!</p> <p>&copy; 2024 Lobão Turismo. Sua viagem merece o melhor!</p> <p>&copy; 2024 Lobão Turismo. Sua viagem merece o melhor!</p>
+    </footer>ooter>ooter>
+
+
 </body>
+<script>
+    document.querySelectorAll('.pacote-video').forEach(video => {
+        video.removeAttribute('controls');
+        video.setAttribute('loop', '');
+        video.setAttribute('autoplay', '');
+        video.muted = true;
+    });
+</script>
 </html>

@@ -29,7 +29,7 @@
         <section class="galeria">
             <div class="viagem">
                 <h2>Porto Seguro-BA</h2>
-                <video class="pacote-video" loop autoplay muted>
+                <video class="pacote-video" loop autoplay muted aria-label="Vídeo sobre Porto Seguro-BA">
                    <source src="img/mp4/AQM9z1DBiB-l2g6T9BnTbsRFwUYB0J7d9WwZwxh5M5MRbHDvf_94Rg4DCcZP_fkuadXskj8585TktchaqYAdj7cvc1WlEGWQYrqBmwc.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
@@ -38,7 +38,7 @@
 
             <div class="viagem">
                 <h2>Aparecida do Norte</h2>
-                <video class="pacote-video" loop autoplay muted>
+                <video class="pacote-video" loop autoplay muted aria-label="Vídeo sobre Aparecida do Norte">
                     <source src="img/mp4/aparecida_do_norte_gratidao.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
@@ -47,19 +47,28 @@
 
             <div class="viagem">
                 <h2>São Paulo</h2>
-                <video class="pacote-video" loop autoplay>
-                    <source src="img/mp4/AQOYmWExBTxiTce9o-vDYnIUyx7zyTueVKFLtkScw_7mOQ_-VrtLxpdnEl4gwlcuK-Y2GClHURX9u2Izl1hG_dzs9Rs06-zuPuE-ots.mp4" type="video/mp4">Seu navegador não suporta o elemento de vídeo.rce src="img/mp4/AQOYmWExBTxiTce9o-vDYnIUyx7zyTueVKFLtkScw_7mOQ_-VrtLxpdnEl4gwlcuK-Y2GClHURX9u2Izl1hG_dzs9Rs06-zuPuE-ots.mp4" type="video/mp4">
-                    
+                <video class="pacote-video" loop autoplay muted aria-label="Vídeo sobre São Paulo">
+                    <source src="img/mp4/AQOYmWExBTxiTce9o-vDYnIUyx7zyTueVKFLtkScw_7mOQ_-VrtLxpdnEl4gwlcuK-Y2GClHURX9u2Izl1hG_dzs9Rs06-zuPuE-ots.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
                 </video>
                 <p>Uma viagem mágica para toda a família! Pacotes exclusivos para São Paulo.</p>
             </div>
         </section>
+
+        <!-- Música de fundo -->
+        <audio autoplay loop>
+            <source src="img/mp4/musica_de_fundo.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
     </main>
 
     <footer>
-        <p>&copy; 2024 Lobão Turismo. Sua viagem merece o melhor!</p> <p>&copy; 2024 Lobão Turismo. Sua viagem merece o melhor!</p> <p>&copy; 2024 Lobão Turismo. Sua viagem merece o melhor!</p>
-    </footer>ooter>ooter>
+        <p>&copy; 2024 Lobão Turismo. Sua viagem merece o melhor!</p>
+    </footer>
 
-
+    <!-- Script para ajustar o volume -->
+    <script>
+        document.querySelector('audio').volume = 1; // Define o volume para 50%
+    </script>
 </body>
 </html>

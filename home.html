@@ -3,36 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciamento - Lobão Turismo</title>
+    <title>Painel de Controle - Lobão Turismo</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <header>
-        <h1>Painel de Controle</h1>
-        <button id="logout">Sair</button>
+        <h1>Painel de Controle - Lobão Turismo</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="login.html">Sair</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <section id="pacotes-container">
-            <h2>Gerencie seus Pacotes de Viagem</h2>
-            <button id="add-package">Adicionar Pacote</button>
-        </section>
-    </main>
-    <script>
-        document.getElementById("logout").addEventListener("click", function() {
-            window.location.href = "login.html";
-        });
 
-        document.getElementById("add-package").addEventListener("click", function() {
-            const newPackage = document.createElement("div");
-            newPackage.classList.add("pacote");
-            newPackage.innerHTML = `
-                <h3>Novo Pacote</h3>
-                <p>Descrição do pacote</p>
-                <button class="edit">Editar</button>
-                <button class="delete">Excluir</button>
-            `;
-            document.getElementById("pacotes-container").appendChild(newPackage);
-        });
-    </script>
+    <main>
+        <section>
+            <h2>Gerenciar Passeios</h2>
+            <div id="passeios-container">
+                <!-- Passeios existentes serão listados aqui -->
+            </div>
+            <button id="addPasseioBtn">Adicionar Novo Passeio</button>
+        </section>
+
+        <!-- Modal para Adicionar/Editar Passeio -->
+        <div id="modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <h3 id="modalTitle">Adicionar Passeio</h3>
+                <form id="passeioForm">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" required></textarea>
+
+                    <label for="video">URL do Vídeo:</label>
+                    <input type="text" id="video" name="video" required>
+
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lobão Turismo. Sua viagem merece o melhor!</p>
+    </footer>
+
+    <script src="js/painel.js"></script>
 </body>
 </html>

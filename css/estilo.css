@@ -1,297 +1,108 @@
-/* Reset */
-* {
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Garante que o corpo da página ocupe pelo menos 100% da altura da tela */
-}
-
-/* Cabeçalho */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #007bff;
-    padding: 15px 30px;
+    background-color: #007BFF;
     color: white;
-    border-bottom: 5px solid #ff6347; /* Alterei para um vermelho mais suave */
+    padding: 10px 20px;
+    text-align: center;
 }
 
-header .logo img {
-    border-radius: 50%;
+header h1 {
+    margin: 0;
 }
 
-nav {
-    flex: 1;
-    text-align: right;
-}
-
-.menu {
+nav ul {
     list-style: none;
-    display: inline-flex;
-    gap: 20px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-.menu a {
-    border-radius: 2px solid white;
-    text-decoration: none;
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
     color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    text-decoration: none;
 }
 
-.menu a:hover {
-    color: #ffdd57;
-}
-
-/* Seção Principal */
 main {
-    padding: 50px 20px;
-    flex: 1; /* Isso faz com que o conteúdo principal ocupe o espaço restante disponível */
+    padding: 20px;
 }
 
-/* Introdução */
-.intro {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.intro h1 {
-    font-size: 2.5rem;
-    color: #007bff;
-}
-
-.intro p {
-    font-size: 1.2rem;
-    color: #666;
-}
-
-/* Galeria de Pacotes */
-.galeria {
+#passeios-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
-    padding: 20px 0;
+    gap: 20px;
 }
 
-.viagem {
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.viagem:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.pacote-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 5px solid #007bff;
-}
-
-.viagem h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin: 20px 0 10px;
-}
-
-.viagem p {
-    font-size: 1rem;
-    color: #666;
-    padding: 0 10px;
-    margin-bottom: 20px;
-}
-
-.viagem .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.viagem .btn:hover {
-    background-color: #0056b3;
-}
-.pacote .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.tour .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-bottom: 20px;
-}
-.tour {
-    text-align: center; /* Centraliza o texto dentro do contêiner */
-    max-width: 400px;   /* Limita a largura do contêiner para não ficar muito grande */
-    margin: 0 auto;     /* Centraliza o contêiner dentro do pai (ex. o corpo da página) */
-    padding: 20px;      /* Adiciona um pouco de espaço em torno do conteúdo */
-}
-
-/* Para a imagem */
-.tour-img {
-    width: 100%;        /* A imagem vai ocupar 100% da largura do contêiner */
-    max-width: 700px;   /* Limita a largura da imagem */
-    height: auto;       /* Mantém a proporção da imagem */
-    border-radius: 15px; /* Arredonda as bordas da imagem */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave ao redor da imagem */
-}
-
-/* Estilo para o container de vídeos */
-.video-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto 20px; /* Centraliza o vídeo e adiciona espaçamento inferior */
-    overflow: hidden;
-    border-radius: 10px; /* Arredonda as bordas do vídeo */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao redor do vídeo */
-}
-
-/* Estilo para os vídeos */
-.pacote-video {
-    width: 100%;
-    height: auto;
-    display: block; /* Remove espaços extras ao redor do vídeo */
-    object-fit: cover; /* Garante que o vídeo preencha o container sem distorção */
-}
-
-/* Login */
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-}
-
-.login-box {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 400px; /* Limita o tamanho da caixa de login */
-    width: 100%;
-}
-
-.login-box h2 {
-    margin-bottom: 20px;
-    color: #007bff;
-}
-
-.login-box input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+.passeio-card {
+    background: white;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.login-box button {
-    width: 100%;
-    padding: 10px;
-    background: #007BFF;
+.passeio-card h3 {
+    margin: 0 0 10px;
+}
+
+.passeio-card p {
+    margin: 0 0 10px;
+}
+
+.passeio-card button {
+    background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s ease;
 }
 
-.login-box button:hover {
-    background: #0056b3;
+.passeio-card button:hover {
+    background-color: #0056b3;
 }
 
-/* Rodapé */
-footer {
-    text-align: center;
-    background-color: #007bff;
-    color: white;
-    padding: 15px 0;
-    margin-top: 30px;
-    border-top: 5px solid #ff6347;
-    flex-shrink: 0;
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-footer p {
-    font-size: 1rem;
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    position: relative;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .galeria {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .viagem {
-        width: 90%;
-    }
-
-    .intro h1 {
-        font-size: 2rem;
-    }
-
-    .intro p {
-        font-size: 1rem;
-    }
+.modal-content h3 {
+    margin-top: 0;
 }
 
-@media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav {
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .menu {
-        display: block;
-    }
-
-    .menu li {
-        margin-bottom: 10px;
-    }
-
-    .viagem {
-        width: 100%;
-    }
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }
